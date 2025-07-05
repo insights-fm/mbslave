@@ -145,6 +145,10 @@ CREATE INDEX artist_release_group_va_idx_sort ON artist_release_group_va (artist
 CREATE UNIQUE INDEX artist_release_group_nonva_idx_uniq ON artist_release_group_nonva (release_group, artist);
 CREATE UNIQUE INDEX artist_release_group_va_idx_uniq ON artist_release_group_va (release_group, artist);
 
+CREATE TABLE artist_release_group_pending_update (
+    release_group INTEGER NOT NULL
+);
+
 --------------------------------------------------------------------------------
 SELECT '20250408-mbs-13322.sql';
 
