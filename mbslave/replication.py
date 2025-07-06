@@ -490,7 +490,7 @@ def download_packet(base_url: str, token: str, replication_seq: int) -> BytesIO:
 
 
 def mbslave_sync_main(config: Config, args: argparse.Namespace) -> None:
-    db = connect_db(config)
+    db = connect_db(config, set_search_path=True)
 
     base_url = config.musicbrainz.base_url
     token = config.musicbrainz.token
